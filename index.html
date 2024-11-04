@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Project....</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap" rel="stylesheet">
+    <!-- google fonts -->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <div class="main1">
+                    <h1 class="nav-brand"><a href="index.html">
+                            <!-- <span>محمد عمر</span>-->
+                            <img src="img/MR.png" alt="مستر محمد عمر">
+                        </a>
+                    </h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="button login-button">
+                        <span>تسجيل دخول</span>
+                        <div class="icon"></div>
+                    </a>
+                    <a href="pages/sign-up.html" class="button register-button">
+                        <span>أنشئ حسابك</span>
+                        <div class="icon"></div>
+                    </a>
+                    <a href="#" class="button book-button">
+                        <span>حجز محاضرات</span>
+                        <div class="icon"></div>
+                    </a>
+                </div>
+                <div class="main2">
+                    <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
+                    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌓</button>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text-content">
+                    <h1>تاريخ مع عمرو</h1>
+                    <p>مدرس خبير بالتاريخ</p>
+                    <a href="#section1">المزيد &#8595;</a>
+                </div>
+                <div class="content-img">
+                    <!-- Image In Css Looking Backgroung-image Url() -->
+                </div>
+            </div>
+        </header>
+        <!-- Start Section 1 ---------------->
+
+        <section class="section s1" id="section1">
+            <div class="s-content">
+                <div class="s-title">
+                    <h1>حول</h1>
+                </div>
+                <div class="s1-content">
+                    <h2>مستر عمرو</h2>
+                    <p>معلم خبير درس تاريخ العديد من العصور المختلفة كما أنه
+                        معلم <b><span>للمرحلة الثانوية</span>.</b>
+                    </p>
+                    <ul>
+                        <li><span>-</span> الخبرة : +10 سنين</li>
+                        <li><span>-</span> الشهادة الجامعية : معلم دراسات</li>
+                    </ul>
+                    <h2>
+                        <span>التفوق</span> مع مستر <span>عمرو</span>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- End Section 1 ---------------->
+
+        <!-- Start Section 2 ---------------->
+        <section id="section2" class="section">
+            <div class="s-content">
+                <div class="s-title">
+                    <h1>دورات وكورسات</h1>
+                </div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="img/2.png" alt="مستر عمرو">
+                        </div>
+                        <div class="card-title">
+                            <h3>منهج أولي ثانوي</h3>
+                        </div>
+                        <a href="#" class="card-link">سجل دلوقتي!</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="img/2.png" alt="مستر عمرو">
+                        </div>
+                        <div class="card-title">
+                            <h3>العصور القديمة</h3>
+                        </div>
+                        <a href="#" class="card-link">اعرف الحقيقة!</a>
+                    </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="img/2.png" alt="مستر عمرو">
+                        </div>
+                        <div class="card-title">
+                            <h3>العصور الوسطي!</h3>
+                        </div>
+                        <a href="#" class="card-link">افهم اللي بيحصل!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Section 2 ---------------->
+        <!-- قسم النصائح -->
+        <section id="tips" class="tips-section">
+            <div class="tips-content">
+                <h2>نصائح مفيدة</h2>
+                <div class="tip-item">
+                    <div class="tip-icon">🍉</div>
+                    <p>وفّر وقتك وروّق مزاجك</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">🍉</div>
+                    <p>أنفِرَح كثير زي ما تحب</p>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">🍉</div>
+                    <p>إمتحانات بشكل مستمر</p>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <h4 title="Bassem Al-Aasar علامة تجارية مسجلة">تم التطوير بواسطة <sup title="علامة تجارية مسجلة">&reg;</sup>
+                <a href="https://www.facebook.com/profile.php?id=100089759529184">باسم الأعصر
+                    <img src="img/4.jpg" /></a>
+            </h4>
+            <h4 title="جميع الحقوق محفوظة Bassem Al-Aasar">
+                <span title="تحذير!">&#9888;</span> محمي بموجب <Span>&copy;</Span> حقوق الطبع والنشر <span>&copy;</span>
+            </h4>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

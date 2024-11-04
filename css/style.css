@@ -1,0 +1,848 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s !important;
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    font-family: "Noto Kufi Arabic", sans-serif !important;
+    background-image: url(../img/5.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.container {}
+
+/* نصوص بالأحمر مع ظل */
+span {
+    color: #f00;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+/***************************************************/
+/* التصميم الأساسي */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h1.nav-brand a {
+    color: #3b3b3bda;
+    text-shadow: 0px 0px 20px #ffa200;
+    font-size: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+h1.nav-brand a:hover {
+    color: #ffa200;
+}
+
+h1 img {
+    width: 250px;
+    margin-bottom: -20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #007bff;
+}
+
+/******* login button ***************/
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border: 0px solid transparent;
+    background-color: #ffcc00;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+
+.button::before {
+    border: 2px solid #ffcc00;
+    animation: border-blink 1.5s infinite alternate;
+}
+
+.button::after {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.button:hover::after {
+    transform: scale(1);
+}
+
+.button span {
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    color: #535353;
+}
+
+.button:hover span {
+    transform: translateX(5px);
+}
+
+.login-button .icon {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    mask: url('https://img.icons8.com/ios-filled/50/000000/door.png') no-repeat center;
+    mask-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.register-button .icon,
+.book-button .icon {
+    width: 18px;
+    height: 18px;
+    background-color: #333;
+    mask-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.register-button .icon {
+    mask: url('https://img.icons8.com/ios-filled/50/000000/add-user-male.png') no-repeat center;
+}
+
+.book-button .icon {
+    mask: url('https://img.icons8.com/ios-filled/50/000000/calendar.png') no-repeat center;
+}
+
+.button:hover .icon {
+    transform: rotate(10deg);
+}
+
+@keyframes border-blink {
+    from {
+        border-color: #333;
+    }
+
+    to {
+        border-color: #ff7300;
+    }
+}
+
+.button:hover {
+    box-shadow: none !important;
+    transform: scale(0.9) !important;
+    transition: 0.3s;
+}
+
+/******* login button ***************/
+.nav-toggle {
+    display: none;
+    /* إخفاء الأيقونة بشكل افتراضي */
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    margin-right: 20px;
+}
+
+/* تصميم الوضع الليلي */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .nav {
+    background-color: #333;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .nav a,
+body.dark-mode .nav-brand,
+body.dark-mode .nav-toggle,
+body.dark-mode .dark-mode-toggle {
+    color: #ffffff;
+}
+
+body.dark-mode .nav a:hover {
+    color: #ffa500;
+}
+
+
+/***************************************************/
+
+/* الوضع العادي */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav a {
+    color: #333;
+}
+
+button#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* الوضع المظلم */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .nav a {
+    color: #ffffff;
+}
+
+body.dark-mode button#dark-mode-toggle {
+    color: #ffffff;
+}
+
+body.dark-mode .nav {
+    background: #333 !important;
+}
+
+body.dark-mode .nav a {
+    color: #ffc800 !important;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .card {
+    background: #333;
+}
+
+body.dark-mode .card-link {
+    background: #535353;
+    box-shadow: 0px 4px 0px 0px #fff;
+    color: #ffc800;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .card-link:hover {
+    background: #ffc800;
+    box-shadow: 0px 4px 0px 0px #777777;
+    color: #535353;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .s1-content {
+    background: #333;
+}
+
+body.dark-mode .s1-content h2 {
+    color: #ffc800;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .s1-content p {
+    color: #ffc800;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .s1-content ul li {
+    color: #ffc800;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .s1-content ul li span {
+    color: #ff6600;
+}
+
+body.dark-mode .s1-content h2 span {
+    color: #ff6600;
+}
+
+body.dark-mode span {
+    color: #ff6600;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+body.dark-mode .tips-content {
+    background-color: #33333360;
+}
+
+/* body.dark-mode .tips-section {
+    background-color: #444;
+} */
+
+body.dark-mode .tip-item {
+    box-shadow: inset 2px -1px 15px 5px #ffc800;
+    background-color: #4444449a;
+}
+
+body.dark-mode .tip-item p {
+    color: #ffc800;
+    text-shadow: 0px 0px 20px #ffa200;
+}
+
+/****************************************************/
+
+/*************** Start Header ************/
+header {
+    /* يمكنك إلغاء تعليق الخلفية إذا كنت تريد استخدام صورة */
+    /* background-image: url(../img/1.png); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-2 {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffa200;
+    transition: width 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+header .content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: right;
+}
+
+.text-content h1 {
+    color: #fff;
+    text-shadow: 0px 0px 20px #ffa200;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #ffb500;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.text-content a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px -1px 15px 5px #ffc800;
+}
+
+.text-content a:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 2px -1px 15px 5px #ffffff;
+    border: 2px solid #ffc800;
+}
+
+.content-img {
+    background-image: url(../img/2.png);
+    width: 500px;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.content-img:hover {
+    transform: scale(1.1);
+}
+
+/*************** End Header ************/
+
+/* Start Section 1 ************************/
+#section1 {
+    background-image: url(../img/5.png);
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.section .s-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.s-title h1 {
+    color: #333;
+    text-shadow: 0px 0px 20px #bcbcbc;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.s1-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.s1-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.s1-content p {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.s1-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.s1-content ul li {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.s1-content ul li span {
+    font-weight: bold;
+    color: #ffa200;
+}
+
+.s1-content h2 span {
+    color: #ffa200;
+}
+
+/* End Section 1 ************************/
+
+/* Start Section 2 **********************/
+.section {
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+#section2 {
+    background-image: url(../img/3.png);
+}
+
+.s-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #fff;
+    width: 300px;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.card-title h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+.card-link {
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 0px 0px #fff;
+}
+
+.card-link:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 4px 0px 0px #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .card-img img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* End Section 2 ************************/
+.tips-section {
+    background-color: #FFD700;
+    /* لون خلفية أصفر */
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('../img/1.png');
+    /* استبدل بمسار الصورة الخلفية */
+    background-size: cover;
+    /* لتغطية الخلفية بشكل كامل */
+    background-repeat: no-repeat;
+    /* لمنع تكرار الصورة */
+    background-position: center;
+    /* وضع الصورة في المنتصف */
+}
+
+.tips-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* خلفية بيضاء شفافة للنص */
+    padding: 20px;
+    border-radius: 10px;
+    /* زوايا دائرية */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.tip-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tip-item:hover {
+    transform: scale(1.05);
+}
+
+.tip-icon {
+    font-size: 2em;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    .tip-item {
+        flex-direction: column;
+    }
+}
+
+/********************************* Start Footer *****/
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer h4 a {
+    color: #ffa200;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer h4 a:hover {
+    color: #fff;
+}
+
+/********************************* End Footer *****/
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-2 {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin: 0;
+    }
+
+    .content-img {
+        width: 300px;
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    header .nav {
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* إظهار القائمة عند الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: 400px;
+        /* أقصى ارتفاع للقائمة */
+        opacity: 1;
+    }
+
+    .nav-toggle {
+        display: block;
+        /* إظهار الأيقونة على الشاشات الصغيرة فقط */
+    }
+}
+
+/* القائمة المنسدلة عند الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #333;
+        /* لون خلفية داكن */
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-height: 0;
+        /* overflow: hidden;
+        overflow-y: auto; */
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        border-radius: 0 0 10px 10px;
+        /* حواف دائرية أسفل القائمة */
+        padding: 30px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* max-height: 300px; */
+        /* أقصى ارتفاع للقائمة */
+        opacity: 1;
+    }
+
+    .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 15px 20px;
+        width: 90%;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover span,
+    .icon {
+        /* background-color: #444; */
+        color: #ff6600;
+        /* لون النص عند التمرير */
+        border-radius: 5px;
+        /* حواف دائرية للعناصر */
+    }
+
+    .nav-links a:hover .icon {
+        background-color: #ff6600;
+        color: #ff6600;
+        /* لون النص عند التمرير */
+        border-radius: 5px;
+        /* حواف دائرية للعناصر */
+    }
+
+    header .content {
+        margin-top: 100px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    header .nav .main2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .nav {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
